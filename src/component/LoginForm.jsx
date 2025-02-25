@@ -12,7 +12,7 @@ function LoginForm() {
 
   function onSubmit(data) {
     setAmount((prevAmount) => [...prevAmount, data]);
-    toast.success("Form submitted successfully!", {
+    toast.success("Form submitted successfully!!", {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: true,
