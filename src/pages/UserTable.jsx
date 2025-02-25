@@ -2,6 +2,7 @@ import { useContextApi } from "../component/contextapi";
 
 function UserTable() {
   const { amount } = useContextApi();
+
   const data = Array.isArray(amount) ? amount : [];
   const localStoragedata = JSON.stringify(data);
   localStorage.setItem("data", localStoragedata);
