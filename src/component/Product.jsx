@@ -28,7 +28,6 @@ function Product({ item }) {
           alt={item.title}
         />
       </div>
-
       <div className="text-gray-800 font-semibold text-md w-52">
         {item.title.length > 30 ? item.title.slice(0, 17) + "..." : item.title}
       </div>
