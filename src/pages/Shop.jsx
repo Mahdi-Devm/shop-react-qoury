@@ -1,48 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
 import SearchBar from "../component/SearchBar";
 import Product from "../component/Product";
 import Filter from "../component/Filter";
-import { useEffect, useState } from "react";
 import Loading from "../component/Loading";
-import { useContextApi } from "../component/contextapi";
+import useFilteredData from "../component/useFilteredData";
 
 function Shop() {
-  const { newItem } = useContextApi();
-  const newFilter = newItem.category;
-  const priceFilter = newItem.price || 0;
-  const { data, error, isLoading } = useQuery({
-    queryKey: ["my-data", newFilter, priceFilter],
-    queryFn: () =>
-      !newFilter || newFilter === ""
-        ? fetch("https://fakestoreapi.com/products").then((res) => res.json())
-        : fetch(`https://fakestoreapi.com/products/category/${newFilter}`).then(
-            (res) => res.json()
-          ),
-  });
-
-  const [searchResults, setSearchResults] = useState([]);
-
-  useEffect(() => {
-    if (data) {
-      let filteredData = data;
-      if (priceFilter > 0) {
-        filteredData = filteredData.filter((item) => item.price <= priceFilter);
-      }
-      setSearchResults(filteredData);
-    }
-  }, [data, priceFilter]);
-
-  const handleSearch = (searchTerm) => {
-    if (searchTerm) {
-      const filteredResults = data.filter((item) =>
-        item.title.toLowerCase().includes(searchTerm)
-      );
-      setSearchResults(filteredResults);
-    } else {
-      setSearchResults(data);
-    }
-  };
-
+  const { searchResults, isLoading, error, handleSearch } = useFilteredData();
   if (isLoading)
     return (
       <div>
