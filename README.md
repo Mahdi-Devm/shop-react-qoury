@@ -1,8 +1,24 @@
-# React + Vite
+🛒 Online Store with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple online store built using React and includes the following features:
+Features:
 
-Currently, two official plugins are available:
+    🔑 User Login & Registration: Manage and submit data using React Hook Form.
+    📦 Product List: Fetch and display products from an API using React Query.
+    🛍️ Shopping Cart: Users can add and remove products from their shopping cart.
+    🎨 Modern & Responsive UI: Designed with Tailwind CSS for a sleek and adaptive layout.
+    🔄 State Management: Redux is used to manage the cart and user data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies:
+
+    ⚛️ React (for building the user interface)
+    📝 React Hook Form (for managing forms)
+    🔌 React Query (for fetching data from the API)
+    📊 Redux (for managing state)
+    💅 Tailwind CSS (for UI design)
+
+How to Run:
+
+    📂 Clone the project.
+    🚀 Run npm install to install dependencies.
+    🖥️ Run npm start to launch the local development server.
