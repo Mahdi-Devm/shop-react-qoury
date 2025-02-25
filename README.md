@@ -19,6 +19,7 @@ Technologies:
 
 How to Run:
 
-    📂 Clone the project.
+    📂 Clone the project:
+    git clone https://github.com/Mahdi-Devm/shop-react-query.git
     🚀 Run npm install to install dependencies.
-    🖥️ Run npm start to launch the local development server.
+    🖥️ Run npm start to launch the local development server
