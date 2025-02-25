@@ -24,7 +24,6 @@ function Cart() {
             Review your items and proceed to checkout
           </p>
         </div>
-
         <div
           className="grid grid-cols-4 gap-4"
           style={{ maxHeight: "calc(100vh - 150px)", overflowY: "auto" }}
