@@ -2,8 +2,7 @@ import SearchBar from "../component/SearchBar";
 import Product from "../component/Product";
 import Filter from "../component/Filter";
 import Loading from "../component/Loading";
-import useFilteredData from "../component/useFilteredData";
-
+import useFilteredData from "../CostumeHook/useFilteredData";
 function Shop() {
   const { searchResults, isLoading, error, handleSearch } = useFilteredData();
   if (isLoading)
