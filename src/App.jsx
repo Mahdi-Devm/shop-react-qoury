@@ -20,24 +20,22 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
-    <>
-      <ContextApi>
-        <QueryClientProvider client={queryClient}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Loagin />} />
-              <Route path="login" element={<Loagin />} />
-              <Route path="app" element={<AppAppLayOute />}>
-                <Route path="usertable" element={<UserTable />} />
-                <Route path="shop" element={<Shop />} />
-                <Route path="cart" element={<Cart />} />
-              </Route>
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </QueryClientProvider>
-      </ContextApi>
-    </>
+    <ContextApi>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Loagin />} />
+            <Route path="login" element={<Loagin />} />
+            <Route path="app" element={<AppAppLayOute />}>
+              <Route path="usertable" element={<UserTable />} />
+              <Route path="shop" element={<Shop />} />
+              <Route path="cart" element={<Cart />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </ContextApi>
   );
 }
 
