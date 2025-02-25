@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import FilteCategory from "./FilteCategory";
 import FiltePrice from "./FiltePrice";
 import Applyfilters from "./Applyfilters";
-import useFilter from "./useFilter";
+import useFilter from "../CostumeHook/useFilter";
 
 function Filter({ onPriceChange }) {
   const {
